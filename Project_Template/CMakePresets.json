@@ -1,0 +1,46 @@
+"version": 3,
+"configurePresets": [
+    // ================================
+    // 1. 基础预设（提取公共配置） 
+    // ================================
+    {
+        "name": "stm32-base",           // 基本预设名称 
+        "hidden": true,                 // 隐藏此预设，仅作为基类供子预设继承 
+        "generator": "Ninja",           // 使用 Ninja 构建系统（编译更快） 
+        // ARM 交叉编译工具链路径 
+        "toolchainFile": "${sourceDir}/cmake/arm-none-eabi-gcc.cmake", 
+        "cacheVariables": {
+        // 生成compile_commands.json 供 IDE/clangd 代码跳转使用
+        "CMAKE_EXPORT_COMPILE_COMMADS": "ON" 
+        }
+    }, 
+
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "stm32-debug",
+      "displayName": "STM32 Debug Build",
+      "description": "Build with -Og and debug symbols",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/debug",
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi-gcc.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "stm32-release",
+      "displayName": "STM32 Release Build",
+      "description": "Optimize for size (-Os)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release",
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi-gcc.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "MinSizeRel",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    }
+  ]
+}

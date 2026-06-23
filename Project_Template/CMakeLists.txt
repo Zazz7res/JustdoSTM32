@@ -17,11 +17,11 @@ endif()
 # 全局编译选项 
 # ----------------------------------------------------------------- 
 add_compile_options(
--Wall 
--Wextra 
--Who-unused-parameter 
--fdata-sections 
--ffunction-section 
+-Wall
+-Wextra
+-Wno-unused-parameter
+-fdata-sections
+-ffunction-sections
 )
 
 # 根据构建类型自动设置优化与调试选项  
@@ -40,23 +40,26 @@ endif()
 # 全局宏定义 
 # ---------------------------------------- 
 add_compile_definitions(
-STM32F10X_MD 
+STM32F10X_MD
 USE_STDPERIPH_DRIVER
 )
 
-set(STM32_PERIPH_DRIVERS gpio rcc usart i2c spi tim exti misc) 
+# ------------------------------------------------------------------------------
+# 启用外设列表
+# ------------------------------------------------------------------------------
+set(STM32_PERIPH_DRIVERS gpio rcc usart i2c spi tim exti misc)
 
 # ---------------------------------------- 
 #  配置接口库: 解耦核心 （纯头文件依赖） 
 set(STM32_CONFIG_DIR ${CMAKE_BINARY_DIR}/config)
 file(MAKE_DIRECTORY ${STM32_CONFIG_DIR})
 
-add_library(stm32_config INTERFACE) 
+add_library(stm32_config INTERFACE)
 
-set(STM32_PERIPH_INCLUDES "") 
-foreach(periph ${STM32_PERIPH_DRIVERS}) 
-if（"${periph}" STREQUAL "misc") 
-    string(APPEND STM32_PERIPH_INCLUDES "#include \ "misc.h\"\n") 
+set(STM32_PERIPH_INCLUDES "")
+foreach(periph ${STM32_PERIPH_DRIVERS})
+if("${periph}" STREQUAL "misc")
+    string(APPEND STM32_PERIPH_INCLUDES "#include \"misc.h\"\n")
 else()
     string(APPEND STM32_PERIPH_INCLUDES "#include \"stm32f10x_${periph}.h\"\n")
 endif()
@@ -68,46 +71,53 @@ ${STM32_CONFIG_DIR}/stm32f10x_conf.h
 @ONLY
 )
 
-target_include_directories(stm32_config INTERFACE 
+target_include_directories(stm32_config INTERFACE
 ${STM32_CONFIG_DIR}
-${CMAKE_SOURCE_DIR}/src/driver/inc 
+${CMAKE_SOURCE_DIR}/src/driver/inc
 )
 
-# --------------------------------------------------- 
-#  链接脚本路径 
-# ----------------------------------------------------- 
-set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/src/starup/STM32F103C8Tx_FLASH.ld) # --------------------------------------------- # 添加子目录  # -------------------------------------------------- add_subdirectory(src/cmsis) 
+# ------------------------------------------------------------------------------
+# 链接脚本路径
+# ------------------------------------------------------------------------------
+set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/src/startup/STM32F103C8Tx_FLASH.ld)
+
+# ------------------------------------------------------------------------------
+# 添加子目录
+# ------------------------------------------------------------------------------
+add_subdirectory(src/cmsis)
 add_subdirectory(src/driver)
-add_subdirectory(src/common) 
-add_subdirectory(src/bsp) 
-add_subdirectory(src/app) 
+add_subdirectory(src/common)
+add_subdirectory(src/bsp)
+add_subdirectory(src/app)
 
-# ----------------------------------------------- 
-#  可执行目标 
-# ------------------------------------------------ 
-add_exrcutable(${PROJECT_NAME}.elf) 
-set_target_properties(${PROJECT_NAME}.elf PROPERTIES 
-    LINKER_LANGUAGE C 
-    LINK_DEPENDS "${LINKER_SCRIPT}" 
+# ------------------------------------------------------------------------------
+# 可执行目标
+# ------------------------------------------------------------------------------
+add_executable(${PROJECT_NAME}.elf)
+set_target_properties(${PROJECT_NAME}.elf PROPERTIES
+  LINKER_LANGUAGE C
+  LINK_DEPENDS "${LINKER_SCRIPT}"
 )
-target_link_libraries(${PROJECT_NAME}.elf PRIVATE app) 
-target_sources(${PROJECT_NAME}.elf PRIVATE src/starup/starup_stm32f10x_md.s) 
-set_source_files_properties(src/starup/starup_stm32f10x_md.s PROPERTIES LANGUAGE ASM)
+target_link_libraries(${PROJECT_NAME}.elf PRIVATE app)
+target_sources(${PROJECT_NAME}.elf PRIVATE src/startup/startup_stm32f10x_md.s)
+set_source_files_properties(src/startup/startup_stm32f10x_md.s PROPERTIES LANGUAGE ASM)
 
-# ----------------------------------------- 
-# target_link_options(${PROJECT_NAME}.elf PRIVATE 
---specs=nano.specs 
--T${LINKER_SCRIPT} 
--WL, -Map=${CMAKE_BINARY_DIR}/${PROJECT_NAME}.map 
--Wl, --no-warn-rwx-segments 
-) 
+# ------------------------------------------------------------------------------
+# 链接选项
+# ------------------------------------------------------------------------------
+target_link_options(${PROJECT_NAME}.elf PRIVATE
+--specs=nano.specs
+-T${LINKER_SCRIPT}
+-Wl,-Map=${CMAKE_BINARY_DIR}/${PROJECT_NAME}.map
+-Wl,--no-warn-rwx-segments
+)
 
 # ------------------------------------------ 
 # 构建后处理
-# ------------------------------------------ 
-add_custom_command(TARGET $(PROJECT_NAME}.elf POST_BUILD 
-COMMAND ${CMAKE_OBJCOPY} -0 binary $<TARGET_FILE:${PROJECT_NAME}.elf> ${PROJECT_NAME}.bin 
-COMMAND ${CMAKE_OBJCOPY} -0 ihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${PROJECT_NAME}.hex
+# ------------------------------------------------------------------------------
+add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
+COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${PROJECT_NAME}.elf> ${PROJECT_NAME}.bin
+COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${PROJECT_NAME}.hex
 COMMAND ${CMAKE_SIZE_UTIL} $<TARGET_FILE:${PROJECT_NAME}.elf>
-COMMAND "Generate .bin, .hex and showing memory usage"
-) 
+COMMENT "Generating .bin, .hex and showing memory usage"
+)
