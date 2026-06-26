@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/go/JustdoSTM32/Project_Template/build/debug/cmake_install.cmake",
+		"/home/go/JustdoSTM32/Project_Template/build/debug/src/cmsis/cmake_install.cmake",
+		"/home/go/JustdoSTM32/Project_Template/build/debug/src/driver/cmake_install.cmake",
+		"/home/go/JustdoSTM32/Project_Template/build/debug/src/common/cmake_install.cmake",
+		"/home/go/JustdoSTM32/Project_Template/build/debug/src/bsp/cmake_install.cmake",
+		"/home/go/JustdoSTM32/Project_Template/build/debug/src/app/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,17 @@
+/home/go/JustdoSTM32/Project_Template/build/debug/CMakeFiles/ThroughBeam_Counting.elf.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/CMakeFiles/edit_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/CMakeFiles/rebuild_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/cmsis/CMakeFiles/cmsis.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/cmsis/CMakeFiles/edit_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/cmsis/CMakeFiles/rebuild_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/driver/CMakeFiles/driver.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/driver/CMakeFiles/edit_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/driver/CMakeFiles/rebuild_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/common/CMakeFiles/common.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/common/CMakeFiles/edit_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/common/CMakeFiles/rebuild_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/bsp/CMakeFiles/edit_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/bsp/CMakeFiles/rebuild_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/app/CMakeFiles/app.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/app/CMakeFiles/edit_cache.dir
+/home/go/JustdoSTM32/Project_Template/build/debug/src/app/CMakeFiles/rebuild_cache.dir
