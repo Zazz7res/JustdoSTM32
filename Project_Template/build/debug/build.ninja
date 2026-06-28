@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_ThroughBeam_Counting.elf: phony || cmake
 
 build CMakeFiles/ThroughBeam_Counting.elf.dir/src/startup/startup_stm32f10x_md.s.obj: ASM_COMPILER__ThroughBeam_Counting.2eelf_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/startup/startup_stm32f10x_md.s || cmake_object_order_depends_target_ThroughBeam_Counting.elf
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = CMakeFiles/ThroughBeam_Counting.elf.dir/src/startup/startup_stm32f10x_md.s.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -x assembler-with-cpp -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/app -I/home/go/JustdoSTM32/Project_Template/src/common -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config -I/home/go/JustdoSTM32/Project_Template/src/common/.
@@ -61,7 +61,7 @@ build CMakeFiles/ThroughBeam_Counting.elf.dir/src/startup/startup_stm32f10x_md.s
 
 build CMakeFiles/ThroughBeam_Counting.elf.dir/src/app/stm32f10x_it.c.obj: C_COMPILER__ThroughBeam_Counting.2eelf_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/app/stm32f10x_it.c || cmake_object_order_depends_target_ThroughBeam_Counting.elf
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = CMakeFiles/ThroughBeam_Counting.elf.dir/src/app/stm32f10x_it.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/app -I/home/go/JustdoSTM32/Project_Template/src/common -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config -I/home/go/JustdoSTM32/Project_Template/src/common/.
@@ -129,7 +129,7 @@ build cmake_object_order_depends_target_cmsis: phony || .
 
 build src/cmsis/CMakeFiles/cmsis.dir/system_stm32f10x.c.obj: C_COMPILER__cmsis_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/cmsis/system_stm32f10x.c || cmake_object_order_depends_target_cmsis
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/cmsis/CMakeFiles/cmsis.dir/system_stm32f10x.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config -I/home/go/JustdoSTM32/Project_Template/src/driver/inc
@@ -195,7 +195,7 @@ build cmake_object_order_depends_target_driver: phony || cmake_object_order_depe
 
 build src/driver/CMakeFiles/driver.dir/src/stm32f10x_gpio.c.obj: C_COMPILER__driver_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/driver/src/stm32f10x_gpio.c || cmake_object_order_depends_target_driver
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/driver/CMakeFiles/driver.dir/src/stm32f10x_gpio.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config
@@ -205,7 +205,7 @@ build src/driver/CMakeFiles/driver.dir/src/stm32f10x_gpio.c.obj: C_COMPILER__dri
 
 build src/driver/CMakeFiles/driver.dir/src/stm32f10x_rcc.c.obj: C_COMPILER__driver_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/driver/src/stm32f10x_rcc.c || cmake_object_order_depends_target_driver
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/driver/CMakeFiles/driver.dir/src/stm32f10x_rcc.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config
@@ -215,7 +215,7 @@ build src/driver/CMakeFiles/driver.dir/src/stm32f10x_rcc.c.obj: C_COMPILER__driv
 
 build src/driver/CMakeFiles/driver.dir/src/stm32f10x_usart.c.obj: C_COMPILER__driver_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/driver/src/stm32f10x_usart.c || cmake_object_order_depends_target_driver
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/driver/CMakeFiles/driver.dir/src/stm32f10x_usart.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config
@@ -225,7 +225,7 @@ build src/driver/CMakeFiles/driver.dir/src/stm32f10x_usart.c.obj: C_COMPILER__dr
 
 build src/driver/CMakeFiles/driver.dir/src/stm32f10x_i2c.c.obj: C_COMPILER__driver_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/driver/src/stm32f10x_i2c.c || cmake_object_order_depends_target_driver
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/driver/CMakeFiles/driver.dir/src/stm32f10x_i2c.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config
@@ -235,7 +235,7 @@ build src/driver/CMakeFiles/driver.dir/src/stm32f10x_i2c.c.obj: C_COMPILER__driv
 
 build src/driver/CMakeFiles/driver.dir/src/stm32f10x_spi.c.obj: C_COMPILER__driver_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/driver/src/stm32f10x_spi.c || cmake_object_order_depends_target_driver
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/driver/CMakeFiles/driver.dir/src/stm32f10x_spi.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config
@@ -245,7 +245,7 @@ build src/driver/CMakeFiles/driver.dir/src/stm32f10x_spi.c.obj: C_COMPILER__driv
 
 build src/driver/CMakeFiles/driver.dir/src/stm32f10x_tim.c.obj: C_COMPILER__driver_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/driver/src/stm32f10x_tim.c || cmake_object_order_depends_target_driver
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/driver/CMakeFiles/driver.dir/src/stm32f10x_tim.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config
@@ -255,7 +255,7 @@ build src/driver/CMakeFiles/driver.dir/src/stm32f10x_tim.c.obj: C_COMPILER__driv
 
 build src/driver/CMakeFiles/driver.dir/src/stm32f10x_exti.c.obj: C_COMPILER__driver_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/driver/src/stm32f10x_exti.c || cmake_object_order_depends_target_driver
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/driver/CMakeFiles/driver.dir/src/stm32f10x_exti.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config
@@ -265,7 +265,7 @@ build src/driver/CMakeFiles/driver.dir/src/stm32f10x_exti.c.obj: C_COMPILER__dri
 
 build src/driver/CMakeFiles/driver.dir/src/misc.c.obj: C_COMPILER__driver_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/driver/src/misc.c || cmake_object_order_depends_target_driver
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/driver/CMakeFiles/driver.dir/src/misc.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config
@@ -331,7 +331,7 @@ build cmake_object_order_depends_target_common: phony || cmake_object_order_depe
 
 build src/common/CMakeFiles/common.dir/syscalls.c.obj: C_COMPILER__common_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/common/syscalls.c || cmake_object_order_depends_target_common
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/common/CMakeFiles/common.dir/syscalls.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/common/. -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config
@@ -341,7 +341,7 @@ build src/common/CMakeFiles/common.dir/syscalls.c.obj: C_COMPILER__common_unscan
 
 build src/common/CMakeFiles/common.dir/Delay.c.obj: C_COMPILER__common_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/common/Delay.c || cmake_object_order_depends_target_common
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/common/CMakeFiles/common.dir/Delay.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/common/. -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config
@@ -436,7 +436,7 @@ build cmake_object_order_depends_target_app: phony || cmake_object_order_depends
 
 build src/app/CMakeFiles/app.dir/main.c.obj: C_COMPILER__app_unscanned_Debug /home/go/JustdoSTM32/Project_Template/src/app/main.c || cmake_object_order_depends_target_app
   CONFIG = Debug
-  DEFINES = -DFW_VERSION=\"a1679c6-dirty\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  DEFINES = -DFW_VERSION=\"2cf2c2f\" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   DEP_FILE = src/app/CMakeFiles/app.dir/main.c.obj.d
   FLAGS = -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -std=gnu11 -g -Wall -Wextra -Wno-unused-parameter -fdata-sections -ffunction-sections -g -Og
   INCLUDES = -I/home/go/JustdoSTM32/Project_Template/src/app/. -I/home/go/JustdoSTM32/Project_Template/src/driver/inc -I/home/go/JustdoSTM32/Project_Template/src/cmsis -I/home/go/JustdoSTM32/Project_Template/build/debug/config -I/home/go/JustdoSTM32/Project_Template/src/common/.

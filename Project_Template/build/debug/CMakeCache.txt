@@ -215,7 +215,7 @@ CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/go/JustdoSTM32/Project_Template/cmake/arm-no
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //No help, variable specified on the command line.
-FW_VERSION:UNINITIALIZED=a1679c6-dirty
+FW_VERSION:UNINITIALIZED=2cf2c2f
 
 //Value Computed by CMake
 ThroughBeam_Counting_BINARY_DIR:STATIC=/home/go/JustdoSTM32/Project_Template/build/debug
