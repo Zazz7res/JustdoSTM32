@@ -1,0 +1,35 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "stm32-base",
+      "hidden": true,
+      "displayName": "STM32 Base Config",
+      "description": "Common settings for all STM32 builds",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi-gcc.cmake",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "stm32-debug",
+      "inherits": "stm32-base",
+      "displayName": "STM32 Debug Build",
+      "description": "Build with -Og and debug symbols",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "stm32-release",
+      "inherits": "stm32-base",
+      "displayName": "STM32 Release Build",
+      "description": "Optimize for size (-Os)",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "MinSizeRel"
+      }
+    }
+  ]
+}
