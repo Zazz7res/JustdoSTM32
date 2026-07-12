@@ -1,0 +1,95 @@
+# ================= 1. 编译输出与固件文件 =================
+# 目标文件、依赖文件
+*.o
+*.obj
+*.d
+*.dep
+# 固件与可执行文件
+*.elf
+*.axf
+*.bin
+*.hex
+*.map
+*.lst
+*.sha256
+# 汇编与预处理中间文件
+*.s
+*.i
+
+# ================= 2. 构建系统目录 =================
+# CMake / Ninja / Make 构建目录
+build/
+Build/
+out/
+cmake-build-*/
+__cmake_systeminformation/
+# 编译输出与日志目录 (注意区分大小写)
+output/
+Output/
+Debug/
+Release/
+logs/
+
+# ================= 3. CMake 生成的临时文件 =================
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+cmake_install.cmake
+CMakeConfigureLog.yaml
+# 编译数据库 (供 IDE 代码提示用，本地生成即可，无需提交)
+compile_commands.json
+# Ninja 构建文件
+build.ninja
+rules.ninja
+.ninja_deps
+.ninja_log
+
+# ================= 4. CMake 动态生成的配置文件 =================
+# 您的项目中 stm32f10x_conf.h 是由 .in 模板生成的，无需提交源码库
+**/config/stm32f10x_conf.h
+
+# ================= 5. IDE 与编辑器配置 =================
+# Keil uVision
+*.uvguix.*
+*.uvoptx
+*.uvprojx
+*.bak
+*.htm
+*.crf
+*.plg
+*.opt
+Objects/
+Listings/
+
+# VS Code (如果您希望团队共享调试配置，可注释掉下一行)
+.vscode/
+*.code-workspace
+
+# CLion / IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.project
+.cproject
+.settings/
+
+# ================= 6. 操作系统与临时文件 =================
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+desktop.ini
+ehthumbs.db
+# Linux / Vim / 通用编辑器
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# ================= 7. 其他 =================
+# 本地调试日志
+*.log
+# 您的目录树中存在一些名为 "1" 的异常文件/目录，可能是终端误触产生的，建议忽略并手动删除
+1
