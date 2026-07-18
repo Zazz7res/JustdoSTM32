@@ -7,3 +7,11 @@ if(DEFINED FW_VERSION AND NOT FW_VERSION STREQUAL "")
     add_compile_definitions(FW_VERSION="${FW_VERSION}") 
     message(STATUS "✅ Fireware version enabled: ${FW_VERSION}") 
 endif() 
+# ------------------------------------------------------------------------------
+# 全局编译选项
+# ------------------------------------------------------------------------------
+add_compile_options(
+    -Wall -Wextra 
+    
+
+)
